@@ -1,0 +1,11 @@
+<h2>{{ titulo }}</h2>
+<form action=" {% url 'calculo:enviarCilindro' %} " method="post">
+    {% csrf_token %}
+    <p>El diámetro en metros:</p>
+    <input type="number" name="diametro"><br>
+    <p>La altura en metros:</p>
+    <input type="number" name="altura"><br>
+    <br>
+    <button type="submit">Enviar</button>
+
+</form>
